@@ -22,7 +22,7 @@ public class Student {
 
     private int age;
 
-    private String group;
-
+    @Column(name = "student_group")
+    private String studentGroup;
 
 }

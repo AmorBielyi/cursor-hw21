@@ -35,7 +35,7 @@ public class StudentController {
     @GetMapping("/students/group/{groupName}")
     public List<Student> getStudentsByGroup(@PathVariable("groupName") String groupName) {
         return studentRepository.findAll().stream()
-                .filter(student -> student.getGroup().equals(groupName))
+                .filter(student -> student.getStudentGroup().equals(groupName))
                 .collect(Collectors.toList());
     }
 
